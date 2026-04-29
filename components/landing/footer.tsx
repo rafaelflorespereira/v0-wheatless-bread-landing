@@ -1,33 +1,32 @@
 import Link from "next/link"
-import { Instagram, Facebook, Twitter, Mail } from "lucide-react"
+import { Instagram, Facebook, Mail } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 
 const footerLinks = {
   products: [
-    { label: "Breads", href: "#" },
-    { label: "Pizza Dough", href: "#" },
-    { label: "Pastries", href: "#" },
-    { label: "Baking Mixes", href: "#" },
+    { label: "Pães", href: "#" },
+    { label: "Massa de Pizza", href: "#" },
+    { label: "Doces", href: "#" },
+    { label: "Misturas para Pão", href: "#" },
   ],
   company: [
-    { label: "Our Story", href: "#story" },
+    { label: "Nossa História", href: "#story" },
     { label: "Blog", href: "#" },
-    { label: "Careers", href: "#" },
-    { label: "Press", href: "#" },
+    { label: "Trabalhe Conosco", href: "#" },
+    { label: "Imprensa", href: "#" },
   ],
   support: [
-    { label: "Contact Us", href: "#contact" },
-    { label: "FAQs", href: "#" },
-    { label: "Shipping", href: "#" },
-    { label: "Returns", href: "#" },
+    { label: "Fale Conosco", href: "#contact" },
+    { label: "Perguntas Frequentes", href: "#" },
+    { label: "Entrega", href: "#" },
+    { label: "Trocas e Devoluções", href: "#" },
   ],
 }
 
 const socialLinks = [
   { icon: Instagram, href: "#", label: "Instagram" },
   { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Twitter, href: "#", label: "Twitter" },
 ]
 
 export function Footer() {
@@ -39,20 +38,20 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-6">
             <Link href="/" className="inline-block">
               <span className="text-2xl font-serif font-bold text-background">
-                Pure Grain Co.
+                Vó Zulmira
               </span>
             </Link>
             <p className="text-background/70 max-w-sm">
-              Crafting delicious wheat-free bread and baked goods for a healthier, happier you.
+              Criando deliciosos pães e produtos sem trigo para uma vida mais saudável e feliz.
             </p>
             
             {/* Newsletter */}
             <div className="space-y-3">
-              <p className="text-sm font-medium text-background">Subscribe to our newsletter</p>
+              <p className="text-sm font-medium text-background">Assine nossa newsletter</p>
               <div className="flex gap-2">
                 <Input 
                   type="email" 
-                  placeholder="Enter your email" 
+                  placeholder="Digite seu e-mail" 
                   className="bg-background/10 border-background/20 text-background placeholder:text-background/50 focus:border-background/40"
                 />
                 <Button variant="secondary" className="bg-background text-foreground hover:bg-background/90">
@@ -64,7 +63,7 @@ export function Footer() {
 
           {/* Products */}
           <div>
-            <h3 className="font-semibold text-background mb-4">Products</h3>
+            <h3 className="font-semibold text-background mb-4">Produtos</h3>
             <ul className="space-y-3">
               {footerLinks.products.map((link) => (
                 <li key={link.label}>
@@ -78,7 +77,7 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="font-semibold text-background mb-4">Company</h3>
+            <h3 className="font-semibold text-background mb-4">Empresa</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
@@ -92,7 +91,7 @@ export function Footer() {
 
           {/* Support */}
           <div>
-            <h3 className="font-semibold text-background mb-4">Support</h3>
+            <h3 className="font-semibold text-background mb-4">Suporte</h3>
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.label}>
@@ -108,7 +107,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-background/20 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-background/60">
-            © {new Date().getFullYear()} Pure Grain Co. All rights reserved.
+            © {new Date().getFullYear()} Vó Zulmira. Todos os direitos reservados.
           </p>
           
           {/* Social Links */}

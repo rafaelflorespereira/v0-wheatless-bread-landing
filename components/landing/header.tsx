@@ -6,10 +6,10 @@ import { Menu, X, ShoppingBag } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { href: "#products", label: "Products" },
-  { href: "#benefits", label: "Benefits" },
-  { href: "#story", label: "Our Story" },
-  { href: "#contact", label: "Contact" },
+  { href: "#products", label: "Produtos" },
+  { href: "#benefits", label: "Benefícios" },
+  { href: "#story", label: "Nossa História" },
+  { href: "#contact", label: "Contato" },
 ]
 
 export function Header() {
@@ -22,7 +22,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <span className="text-xl md:text-2xl font-serif font-bold text-foreground tracking-tight">
-              Pure Grain Co.
+              Vó Zulmira
             </span>
           </Link>
 
@@ -48,7 +48,7 @@ export function Header() {
               </span>
             </Button>
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-              Shop Now
+              Comprar Agora
             </Button>
           </div>
 
@@ -56,7 +56,7 @@ export function Header() {
           <button
             className="md:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label="Abrir menu"
           >
             {isMenuOpen ? (
               <X className="h-6 w-6" />
@@ -81,7 +81,7 @@ export function Header() {
                 </Link>
               ))}
               <Button className="mt-4 bg-primary text-primary-foreground hover:bg-primary/90">
-                Shop Now
+                Comprar Agora
               </Button>
             </nav>
           </div>

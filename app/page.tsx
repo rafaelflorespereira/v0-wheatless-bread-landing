@@ -3,7 +3,6 @@ import { Hero } from "@/components/landing/hero"
 import { Products } from "@/components/landing/products"
 import { Benefits } from "@/components/landing/benefits"
 import { Story } from "@/components/landing/story"
-import { Testimonials } from "@/components/landing/testimonials"
 import { CTA } from "@/components/landing/cta"
 import { Footer } from "@/components/landing/footer"
 
@@ -15,7 +14,6 @@ export default function Home() {
       <Products />
       <Benefits />
       <Story />
-      <Testimonials />
       <CTA />
       <Footer />
     </main>

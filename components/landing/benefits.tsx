@@ -3,23 +3,23 @@ import { Leaf, Heart, Wheat, Sparkles } from "lucide-react"
 const benefits = [
   {
     icon: Wheat,
-    title: "100% Wheat-Free",
-    description: "All our products are crafted without wheat, using premium alternative flours for those with sensitivities.",
+    title: "100% Sem Trigo",
+    description: "Todos os nossos produtos são feitos sem trigo, usando farinhas alternativas de alta qualidade.",
   },
   {
     icon: Heart,
-    title: "Heart Healthy",
-    description: "Rich in fiber and nutrients, our breads support digestive health and overall wellness.",
+    title: "Saudável para o Coração",
+    description: "Rico em fibras e nutrientes, nossos pães apoiam a saúde digestiva e o bem-estar geral.",
   },
   {
     icon: Leaf,
-    title: "Natural Ingredients",
-    description: "No artificial preservatives or additives. Just pure, wholesome ingredients you can trust.",
+    title: "Ingredientes Naturais",
+    description: "Sem conservantes ou aditivos artificiais. Apenas ingredientes puros e naturais que você pode confiar.",
   },
   {
     icon: Sparkles,
-    title: "Artisan Quality",
-    description: "Each product is handcrafted with care, ensuring exceptional taste and texture every time.",
+    title: "Qualidade Artesanal",
+    description: "Cada produto é feito à mão com cuidado, garantindo sabor e textura excepcionais sempre.",
   },
 ]
 
@@ -32,15 +32,15 @@ export function Benefits() {
           <div className="space-y-8">
             <div>
               <p className="text-sm uppercase tracking-widest text-primary font-medium mb-4">
-                Why Choose Us
+                Por Que Nos Escolher
               </p>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-6 text-balance">
-                Crafted for your health and happiness
+                Feito para sua saúde e felicidade
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                We believe everyone deserves delicious bread, regardless of dietary restrictions. 
-                Our wheat-free recipes are developed to deliver the taste and texture you love, 
-                while supporting your health journey.
+                Acreditamos que todos merecem pão delicioso, independente de restrições alimentares. 
+                Nossas receitas sem trigo são desenvolvidas para entregar o sabor e textura que você ama, 
+                enquanto apoia sua jornada de saúde.
               </p>
             </div>
 
@@ -67,28 +67,28 @@ export function Benefits() {
               <div className="grid grid-cols-2 gap-8">
                 <div className="text-center">
                   <p className="text-4xl md:text-5xl font-serif font-bold text-primary">50+</p>
-                  <p className="text-sm text-muted-foreground mt-2">Unique Products</p>
+                  <p className="text-sm text-muted-foreground mt-2">Produtos Únicos</p>
                 </div>
                 <div className="text-center">
                   <p className="text-4xl md:text-5xl font-serif font-bold text-primary">10K+</p>
-                  <p className="text-sm text-muted-foreground mt-2">Happy Customers</p>
+                  <p className="text-sm text-muted-foreground mt-2">Clientes Felizes</p>
                 </div>
                 <div className="text-center">
                   <p className="text-4xl md:text-5xl font-serif font-bold text-primary">5</p>
-                  <p className="text-sm text-muted-foreground mt-2">Years of Baking</p>
+                  <p className="text-sm text-muted-foreground mt-2">Anos de Tradição</p>
                 </div>
                 <div className="text-center">
                   <p className="text-4xl md:text-5xl font-serif font-bold text-primary">4.9</p>
-                  <p className="text-sm text-muted-foreground mt-2">Average Rating</p>
+                  <p className="text-sm text-muted-foreground mt-2">Avaliação Média</p>
                 </div>
               </div>
               
               {/* Quote */}
               <div className="border-t border-border pt-8">
                 <blockquote className="text-lg font-serif italic text-foreground">
-                  {`"Finally, bread that tastes amazing and doesn't make me feel terrible. Pure Grain has changed my life!"`}
+                  {`"Finalmente, um pão que é delicioso e não me faz mal. A Vó Zulmira mudou minha vida!"`}
                 </blockquote>
-                <p className="text-sm text-muted-foreground mt-4">— Sarah M., Verified Customer</p>
+                <p className="text-sm text-muted-foreground mt-4">— Maria S., Cliente Verificada</p>
               </div>
             </div>
           </div>
