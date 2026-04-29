@@ -14,7 +14,7 @@ export function Story() {
           <div className="relative order-2 lg:order-1">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
               <Image
-                src="/images/story-baker.jpg"
+                src="/images/story-baker.png"
                 alt="Nossa padeira preparando pão fresco sem trigo"
                 fill
                 className="object-cover"
