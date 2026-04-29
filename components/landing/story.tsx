@@ -12,7 +12,7 @@ export function Story() {
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
               <Image
                 src="/images/story-baker.jpg"
-                alt="Our baker preparing fresh wheat-free bread"
+                alt="Nossa padeira preparando pão fresco sem trigo"
                 fill
                 className="object-cover"
               />
@@ -24,22 +24,22 @@ export function Story() {
           {/* Content */}
           <div className="space-y-6 order-1 lg:order-2">
             <p className="text-sm uppercase tracking-widest text-primary-foreground/70 font-medium">
-              Our Story
+              Nossa História
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold leading-tight text-balance">
-              Born from a passion for better bread
+              Nascida da paixão por um pão melhor
             </h2>
             <div className="space-y-4 text-primary-foreground/90 leading-relaxed">
               <p>
-                Pure Grain Co. started in a small kitchen in 2019 when our founder, Maria, 
-                was diagnosed with a wheat sensitivity. Refusing to give up her love for fresh bread, 
-                she spent months perfecting recipes that would deliver the taste and texture 
-                she craved without the ingredients that caused her discomfort.
+                A Vó Zulmira começou em uma pequena cozinha quando nossa fundadora descobriu 
+                uma sensibilidade ao trigo. Recusando-se a desistir do amor por pão fresco, 
+                ela passou meses aperfeiçoando receitas que entregariam o sabor e a textura 
+                que ela desejava, sem os ingredientes que causavam desconforto.
               </p>
               <p>
-                Today, we serve thousands of customers who, like Maria, believe that dietary 
-                restrictions shouldn&apos;t mean sacrificing flavor. Every loaf, roll, and pizza dough 
-                is made with the same care and attention as that first batch in Maria&apos;s kitchen.
+                Hoje, servimos milhares de clientes que, como ela, acreditam que restrições 
+                alimentares não devem significar sacrificar o sabor. Cada pão, biscoito e massa 
+                é feito com o mesmo cuidado e atenção daquela primeira fornada na cozinha da vó.
               </p>
             </div>
             <Button 
@@ -47,7 +47,7 @@ export function Story() {
               variant="secondary" 
               className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 gap-2 mt-4"
             >
-              Read Our Full Story
+              Leia Nossa História Completa
               <ArrowRight className="h-4 w-4" />
             </Button>
           </div>

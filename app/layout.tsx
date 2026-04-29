@@ -16,8 +16,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Pure Grain Co. | Wheat-Free Artisan Bread & Baked Goods',
-  description: 'Discover our delicious wheat-free artisan breads, pizza doughs, and healthy baked goods. Made with wholesome ingredients for a healthier lifestyle.',
+  title: 'Vó Zulmira | Pães Artesanais Sem Trigo',
+  description: 'Descubra nossos deliciosos pães artesanais sem trigo, massas de pizza e produtos saudáveis. Feitos com ingredientes naturais para uma vida mais saudável.',
   generator: 'v0.app',
   icons: {
     icon: [
