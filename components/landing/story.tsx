@@ -1,10 +1,13 @@
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 export function Story() {
   return (
-    <section id="story" className="py-20 md:py-32 bg-primary text-primary-foreground">
+    <section
+      id="story"
+      className="py-20 md:py-32 bg-primary text-primary-foreground"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image */}
@@ -31,20 +34,22 @@ export function Story() {
             </h2>
             <div className="space-y-4 text-primary-foreground/90 leading-relaxed">
               <p>
-                A Vó Zulmira começou em uma pequena cozinha quando nossa fundadora descobriu 
-                uma sensibilidade ao trigo. Recusando-se a desistir do amor por pão fresco, 
-                ela passou meses aperfeiçoando receitas que entregariam o sabor e a textura 
-                que ela desejava, sem os ingredientes que causavam desconforto.
+                A Vó Zulmira começou em uma pequena cozinha quando nosso
+                fundador descobriu uma sensibilidade ao trigo. Recusando-se a
+                desistir do amor por pão fresco, ele passou meses aperfeiçoando
+                receitas que entregariam o sabor e a textura que ele desejava,
+                sem os ingredientes que causavam desconforto.
               </p>
               <p>
-                Hoje, servimos milhares de clientes que, como ela, acreditam que restrições 
-                alimentares não devem significar sacrificar o sabor. Cada pão, biscoito e massa 
-                é feito com o mesmo cuidado e atenção daquela primeira fornada na cozinha da vó.
+                Hoje, servimos milhares de clientes que, como ela, acreditam que
+                restrições alimentares não devem significar sacrificar o sabor.
+                Cada pão, biscoito e massa é feito com o mesmo cuidado e atenção
+                daquela primeira fornada na cozinha da vó.
               </p>
             </div>
-            <Button 
-              size="lg" 
-              variant="secondary" 
+            <Button
+              size="lg"
+              variant="secondary"
               className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 gap-2 mt-4"
             >
               Leia Nossa História Completa
@@ -54,5 +59,5 @@ export function Story() {
         </div>
       </div>
     </section>
-  )
+  );
 }
