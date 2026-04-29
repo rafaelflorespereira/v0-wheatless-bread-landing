@@ -41,7 +41,7 @@ export function Story() {
                 sem os ingredientes que causavam desconforto.
               </p>
               <p>
-                Hoje, servimos milhares de clientes que, como ela, acreditam que
+                Hoje, servimos milhares de clientes que, como ele, acreditam que
                 restrições alimentares não devem significar sacrificar o sabor.
                 Cada pão, biscoito e massa é feito com o mesmo cuidado e atenção
                 daquela primeira fornada na cozinha da vó.
