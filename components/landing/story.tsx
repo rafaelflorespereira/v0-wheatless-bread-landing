@@ -30,7 +30,7 @@ export function Story() {
               Nossa História
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold leading-tight text-balance">
-              Nascida da paixão por um pão melhor
+              Nascido da paixão por um pão melhor
             </h2>
             <div className="space-y-4 text-primary-foreground/90 leading-relaxed">
               <p>
