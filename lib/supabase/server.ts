@@ -1,5 +1,5 @@
-import "server-only"
-import { createClient } from "@supabase/supabase-js"
+import "server-only";
+import { createClient } from "@supabase/supabase-js";
 
 /**
  * Server-side Supabase client for read-only, public data (e.g. the product
@@ -7,18 +7,18 @@ import { createClient } from "@supabase/supabase-js"
  * RLS policy on the table — see the note at the bottom of this file.
  */
 export function createSupabaseServerClient() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL
-  const key = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 
   if (!url || !key) {
     throw new Error(
       "Missing Supabase env vars: NEXT_PUBLIC_SUPABASE_URL and/or NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY",
-    )
+    );
   }
 
   return createClient(url, key, {
     auth: { persistSession: false, autoRefreshToken: false },
-  })
+  });
 }
 
 /*

@@ -1,12 +1,18 @@
-import Image from "next/image"
-import { ShoppingBag } from "lucide-react"
+import Image from "next/image";
+import { ShoppingBag } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import type { Product } from "@/lib/types"
+import { Button } from "@/components/ui/button";
+import type { Product } from "@/lib/types";
 
 function formatPrice(price: number | string) {
-  return `R$ ${Number(price).toFixed(2).replace(".", ",")}`
+  return `R$ ${Number(price).toFixed(2).replace(".", ",")}`;
 }
+const CATEGORY_LABELS: Record<string, string> = {
+  paes: "Pães",
+  "massa-pizza": "Massa de Pizza",
+  doces: "Doces",
+  misturas: "Misturas",
+};
 
 export function ProductCard({ product }: { product: Product }) {
   return (
@@ -35,7 +41,7 @@ export function ProductCard({ product }: { product: Product }) {
 
       <div className="p-6">
         <p className="text-xs text-muted-foreground uppercase tracking-wide mb-2">
-          {product.category}
+          {CATEGORY_LABELS[product.category] || product.category}
         </p>
         <h3 className="font-serif text-xl font-semibold text-foreground mb-2">
           {product.name}
@@ -60,5 +66,5 @@ export function ProductCard({ product }: { product: Product }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
