@@ -1,32 +1,32 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Menu, X, ShoppingBag } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import Link from "next/link";
+import { Menu, X, ShoppingBag } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useCart } from "@/components/cart/cart-context";
 
 const navLinks = [
   { href: "#products", label: "Produtos" },
   { href: "#benefits", label: "Benefícios" },
   { href: "#story", label: "Nossa História" },
   { href: "#contact", label: "Contato" },
-]
+];
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { openCart, totalItems, checkout } = useCart();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <span className="text-xl md:text-2xl font-serif font-bold text-foreground tracking-tight">
               Vó Zulmira
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
@@ -39,20 +39,29 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" size="icon" className="relative">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="relative"
+              onClick={openCart}
+              aria-label="Abrir carrinho"
+            >
               <ShoppingBag className="h-5 w-5" />
-              <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center">
-                0
-              </span>
+              {totalItems > 0 && (
+                <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center">
+                  {totalItems}
+                </span>
+              )}
             </Button>
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button
+              onClick={checkout}
+              className="bg-primary text-primary-foreground hover:bg-primary/90"
+            >
               Comprar Agora
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -66,7 +75,6 @@ export function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col gap-4">
@@ -80,7 +88,18 @@ export function Header() {
                   {link.label}
                 </Link>
               ))}
-              <Button className="mt-4 bg-primary text-primary-foreground hover:bg-primary/90">
+              <Button
+                variant="outline"
+                className="mt-2 gap-2 border-primary/30"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  openCart();
+                }}
+              >
+                <ShoppingBag className="h-4 w-4" />
+                Carrinho {totalItems > 0 && `(${totalItems})`}
+              </Button>
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
                 Comprar Agora
               </Button>
             </nav>
@@ -88,5 +107,5 @@ export function Header() {
         )}
       </div>
     </header>
-  )
+  );
 }

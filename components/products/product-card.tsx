@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { ShoppingBag } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
 import type { Product } from "@/lib/types";
+import { AddToCartButton } from "@/components/cart/add-to-cart-button";
 
 function formatPrice(price: number | string) {
   return `R$ ${Number(price).toFixed(2).replace(".", ",")}`;
@@ -17,7 +17,7 @@ const CATEGORY_LABELS: Record<string, string> = {
 export function ProductCard({ product }: { product: Product }) {
   return (
     <div className="group bg-card rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-all duration-300">
-      <div className="relative aspect-[4/3] bg-secondary overflow-hidden">
+      <div className="relative aspect-4/3 bg-secondary overflow-hidden">
         {product.image_url ? (
           <Image
             src={product.image_url}
@@ -55,14 +55,7 @@ export function ProductCard({ product }: { product: Product }) {
           <span className="text-lg font-bold text-primary">
             {formatPrice(product.price)}
           </span>
-          <Button
-            size="sm"
-            variant="outline"
-            className="gap-2 border-primary/30 hover:bg-primary hover:text-primary-foreground"
-          >
-            <ShoppingBag className="h-4 w-4" />
-            Adicionar
-          </Button>
+          <AddToCartButton product={product} />
         </div>
       </div>
     </div>
